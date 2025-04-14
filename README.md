@@ -109,23 +109,6 @@ The website is optimized for all devices:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-- **Phone**: +91 8618912020
-- **Email**: support@git-tutor.com
-- **Location**: Belgaum, Karnataka, India
-
-## 🌐 Social Media
-
-- [Facebook](#)
-- [Instagram](#)
-- [Twitter](#)
-- [LinkedIn](#)
-
 ## 🙏 Acknowledgments
 
 - All the professors and team members who contributed to the project
