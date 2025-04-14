@@ -1,0 +1,496 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background: url('images/bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+html {
+    height: max-content;
+}
+
+
+nav {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    z-index: 11;
+    margin-top: -120px;
+
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a :hover {
+    text-decoration: none;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+    transition: .3s;
+    font-family: "Montserrat";
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: red;
+    text-decoration: none;
+    /* Ensure underline doesn't appear on hover */
+}
+
+.nav__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .5s;
+}
+
+.nav__container:hover::before {
+    left: 100%;
+}
+
+.nav__container {
+
+    height: 100%;
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+}
+
+.nav__menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+    /* position: relative; */
+    /* linear-gradient: (155deg,#00fffc,#eee); */
+
+
+}
+
+
+.logo-container {
+    display: flex;
+    /* Align items horizontally */
+    align-items: center;
+    /* Vertically centers items */
+    text-decoration: none;
+    /* Remove underline on link */
+
+}
+
+.logo-container:hover {
+    text-decoration: none;
+    /* Prevent underline on hover */
+}
+
+/* Style for the logo */
+.logo {
+    width: 70px;
+    /* Adjust width as needed */
+    height: auto;
+    margin-right: 6px;
+    /* Spacing between logo and text */
+}
+
+/* Style for the text */
+.logo-container h4 {
+    font-size: 1.5rem;
+    /* Adjust font size if necessary */
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff0066, #ffcc00, #e82dc9, #1cdd59);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+img {
+
+    width: 100%;
+    display: block;
+
+    /* object-fit: cover; */
+
+}
+
+.nav__menu li {
+    margin: 0rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* Stack icon and text */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    /* opacity: 0; */
+    /* Hide text initially */
+    transition: .3s;
+    font-family: "Montserrat";
+    font-size: 1.1rem;
+
+}
+
+.nav__menu a:hover {
+    color: red;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+}
+
+
+/* Profile Page Styling */
+.profile {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin-top: 120px;
+    background: transparent;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #00aaff;
+}
+
+.profile-details p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+
+}
+
+.profile-content {
+    margin-top: 2rem;
+}
+
+.profile-content h2 {
+    font-size: 1.5rem;
+    color: #e1b812;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+}
+
+.profile-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin-bottom: 1.5rem;
+}
+
+.profile-content ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+
+}
+
+.profile-content ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header,
+section,
+footer,
+.profile {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: slideDownBody 1.5s ease-out forwards;
+}
+
+@keyframes slideDownBody {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .menu-btn {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        /* background-color: var(--color-black); */
+        display: none;
+    }
+
+    .icon {
+        margin-top: 0.5rem;
+        /* Reduce space above icon */
+        font-size: 1.2rem;
+        /* Adjust icon size */
+    }
+
+    .nav__menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+
+    .nav__menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav__menu li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav__menu li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    .nav__menu li:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    .nav__menu li:nth-child(6) {
+        animation-delay: 1000ms;
+    }
+
+    @keyframes animateNavItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+
+        }
+
+        100% {
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .nav__menu li a {
+        background: #133E87;
+        ;
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+
+    }
+
+    .nav__menu li a:hover {
+        background: #0D92F4;
+        color: white;
+        text-decoration: none;
+    }
+
+    .profile {
+        padding: 1.8rem;
+    }
+
+    .profile-header {
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile-details p {
+        font-size: 0.95rem;
+    }
+
+    .profile-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .profile-content p,
+    .profile-content ul li {
+        font-size: 0.95rem;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .nav__menu {
+        right: 3%;
+    }
+
+    .profile {
+        padding: 1.2rem;
+        margin-top: 80px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-details h1 {
+        font-size: 1.6rem;
+    }
+
+    .profile-details p {
+        font-size: 0.9rem;
+    }
+
+    .profile-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-content p,
+    .profile-content ul li {
+        font-size: 0.9rem;
+    }
+
+    .profile-content ul {
+        margin-left: 1.5rem;
+    }
+}

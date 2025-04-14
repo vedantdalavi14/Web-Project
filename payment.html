@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT-TUTOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav__container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+                <h4>GIT-TUTOR</h4>
+            </a>
+
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login1.html" class="nav-link">Login</a></li>
+                <li>
+                    <a href="profile.html" class="nav-link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+            <button id="open-menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button id="close-menu-btn" class="menu-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <div class="container">
+            <form action="javascript:void(0);" onsubmit="showPopup()">
+                <div class="row">
+                    <div class="column">
+                        <h3 class="title">Billing Address</h3>
+                        <div class="input-box">
+                            <span>Full Name :</span>
+                            <input type="text" placeholder="Ramesh Patil" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Email :</span>
+                            <input type="email" placeholder="example@example.com" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Address :</span>
+                            <input type="text" placeholder="Room - Street - Locality" required>
+                        </div>
+                        <div class="input-box">
+                            <span>City :</span>
+                            <input type="text" placeholder="Belgaum" required>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>State :</span>
+                                <input type="text" placeholder="Karnataka" required>
+                            </div>
+                            <div class="input-box">
+                                <span>Zip Code :</span>
+                                <input type="number" placeholder="123 456" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <h3 class="title">Payment</h3>
+                        <div class="input-box">
+                            <span>Cards Accepted :</span>
+                            <img src="imgcards.png" alt="">
+                        </div>
+                        <div class="input-box">
+                            <span>Name On Card :</span>
+                            <input type="text" placeholder="Mr. Ramesh Patil" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Credit Card Number :</span>
+                            <input type="number" placeholder="1111 2222 3333 4444" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Exp. Month :</span>
+                            <input type="text" placeholder="August" required>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-box">
+                                <span>Exp. Year :</span>
+                                <input type="number" placeholder="2025" required>
+                            </div>
+                            <div class="input-box">
+                                <span>CVV :</span>
+                                <input type="number" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn1">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup HTML -->
+    <div id="payment-popup" class="popup">
+        <h2>PAYMENT SUCCESSFUL</h2>
+        <p>Thank you for enrolling in the course!</p>
+        <button class="btn-close" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- JavaScript for popup functionality -->
+    <script>
+        function showPopup() {
+            document.getElementById('payment-popup').classList.add('show');
+        }
+
+        function closePopup() {
+            document.getElementById('payment-popup').classList.remove('show');
+            // Optional: Redirect to home after closing popup
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+
+</html>

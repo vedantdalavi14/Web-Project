@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #343a40;
+  background: url('images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  background: transparent;
+  backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    margin-top: -100px;
+}
+
+.nav__container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+  transition: .5s;
+}
+
+.nav__container:hover::before {
+  left: 100%;
+}
+
+.nav__container {
+
+  height: 100%;
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+}
+
+.nav__menu {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+  /* position: relative; */
+  /* linear-gradient: (155deg,#00fffc,#eee); */
+
+
+}
+
+
+.logo-container {
+  display: flex;
+  /* Align items horizontally */
+  align-items: center;
+  /* Vertically centers items */
+  text-decoration: none;
+  /* Remove underline on link */
+
+}
+
+/* Style for the logo */
+.logo {
+  width: 70px;
+  /* Adjust width as needed */
+  height: auto;
+  margin-right: 6px;
+  /* Spacing between logo and text */
+}
+
+/* Style for the text */
+.logo-container h4 {
+  font-size: 1.5rem;
+  /* Adjust font size if necessary */
+  font-weight: bold;
+  background: linear-gradient(270deg, #ff0066, #ffcc00, #e82dc9, #1cdd59);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+img {
+
+  width: 100%;
+  display: block;
+
+  object-fit: cover;
+
+}
+
+.nav__menu li {
+  margin: 0rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* Stack icon and text */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  /* opacity: 0; */
+  /* Hide text initially */
+  transition: .3s;
+  font-family: "Montserrat";
+  font-size: 1.1rem;
+
+}
+
+.nav__menu a:hover {
+  color: red;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+.course-summary {
+  /* display: flex; */
+  justify-content: space-between;
+  /* Space between elements */
+  align-items: flex-start;
+  margin: 100px auto;
+  max-width: 1200px;
+  /* Center the content */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+.course-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.course-image img {
+  width: 500px;
+  /* Full width for course image */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 20px;
+}
+
+
+.course-details {
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.teacher-image {
+  width: 150px;
+  /* Larger teacher image */
+  height: 150px;
+  /* Larger teacher image */
+  border-radius: 50%;
+  /* Circular shape */
+  margin-right: 20px;
+  /* Space between image and text */
+  object-fit: cover;
+  /* Cover the area without distortion */
+}
+
+.course-details {
+  padding: 20px;
+  flex: 1;
+  /* Allows details to take remaining space */
+}
+
+h1 {
+  color: #1d94de;
+  /* Course title color */
+  margin-bottom: 10px;
+  margin-left: 130px;
+}
+
+.instructor-name {
+  color: #e1b812;
+  /* Subtle color for instructor name */
+}
+
+.course-description,
+.course-info,
+.course-topics {
+  margin: 15px 0;
+}
+
+.course-info {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-info li {
+  margin-bottom: 10px;
+}
+
+.course-topics {
+  list-style-type: style square;
+  padding-left: 20px;
+}
+
+.course-topics li {
+  margin-bottom: 5px;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.buy-button:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+
+footer {
+  background: #6482AD;
+  padding-top: 5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: white;
+}
+
+footer h4,a{
+  color: white;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+  margin-left: 20px;
+}
+
+.footer__container div h4 {
+  margin-bottom: 1.2rem;
+}
+
+.footer__1 p {
+  margin: 0 0 2rem;
+}
+
+footer ul li {
+  margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid #0D92F4;
+}
+
+
+body {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideDownBody 1.5s ease-out forwards;
+}
+
+@keyframes slideDownBody {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
