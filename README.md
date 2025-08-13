@@ -63,12 +63,12 @@ webproject/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/git-tutor.git
+   git clone https://github.com/vedantdalavi14/Web-Project
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd git-tutor
+   cd Web-Project
    ```
 
 3. Open the project in your preferred code editor
